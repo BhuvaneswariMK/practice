@@ -1,4 +1,4 @@
-package org.upgrad.upstac.testrequests.consultation;
+package org.upgrad.upstac.testrequests.consultation.models;
 
 import lombok.Data;
 

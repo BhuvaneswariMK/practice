@@ -10,17 +10,17 @@ import java.util.Optional;
 public interface TestRequestFlowRepository extends JpaRepository<TestRequestFlow,Long> {
 
 
-    Optional<TestRequestFlow> findById(Long id);
+	Optional<TestRequestFlow> findById(Long id);
 
 
 
-    void deleteById(Long id);
+	void deleteById(Long id);
 
 
 
 
-
-    List<TestRequestFlow> findByRequest(TestRequest request);
+	
+	List<TestRequestFlow> findByRequest(TestRequest request);
 
 
 }

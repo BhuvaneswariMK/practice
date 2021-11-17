@@ -1,4 +1,4 @@
-package org.upgrad.upstac.testrequests.lab;
+package org.upgrad.upstac.testrequests.lab.models;
 
 import lombok.Data;
 

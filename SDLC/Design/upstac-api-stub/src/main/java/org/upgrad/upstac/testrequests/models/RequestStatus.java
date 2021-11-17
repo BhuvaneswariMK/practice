@@ -1,4 +1,4 @@
-package org.upgrad.upstac.testrequests;
+package org.upgrad.upstac.testrequests.models;
 
 public enum RequestStatus {
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import org.upgrad.upstac.exception.AppException;
 import org.upgrad.upstac.testrequests.TestRequest;
+import org.upgrad.upstac.testrequests.lab.models.CreateLabResult;
 import org.upgrad.upstac.users.User;
 
 import javax.transaction.Transactional;
@@ -33,7 +34,7 @@ public class LabResultService {
     }
 
     @Transactional
-    LabResult saveLabResult(LabResult labResult) {
+     LabResult saveLabResult(LabResult labResult) {
         return labResultRepository.save(labResult);
     }
 
@@ -41,7 +42,7 @@ public class LabResultService {
 
     public LabResult assignForLabTest(TestRequest testRequest, User tester) {
 
-        return createLabResult(tester, testRequest);
+       return createLabResult(tester, testRequest);
 
 
     }
@@ -49,7 +50,7 @@ public class LabResultService {
 
     public LabResult updateLabTest(TestRequest testRequest, CreateLabResult createLabResult) {
 
-        LabResult labResult = labResultRepository.findByRequest(testRequest).orElseThrow(()-> new AppException("Invalid Request"));
+         LabResult labResult = labResultRepository.findByRequest(testRequest).orElseThrow(()-> new AppException("Invalid Request"));
 
         labResult.setBloodPressure(createLabResult.getBloodPressure());
         labResult.setComments(createLabResult.getComments());
@@ -59,8 +60,7 @@ public class LabResultService {
         labResult.setResult(createLabResult.getResult());
         labResult.setUpdatedOn(LocalDate.now());
 
-        return saveLabResult(labResult);
-
+       return saveLabResult(labResult);
 
     }
 

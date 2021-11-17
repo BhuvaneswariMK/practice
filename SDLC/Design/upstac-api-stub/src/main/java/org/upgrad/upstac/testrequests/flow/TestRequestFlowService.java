@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import org.upgrad.upstac.testrequests.TestRequest;
-import org.upgrad.upstac.testrequests.RequestStatus;
+import org.upgrad.upstac.testrequests.models.RequestStatus;
 import org.upgrad.upstac.users.User;
 
 import javax.transaction.Transactional;
@@ -19,7 +19,7 @@ public class TestRequestFlowService {
 
 
     @Transactional
-    public void log(TestRequest testRequest, RequestStatus from, RequestStatus to, User changedBy) {
+   public void log(TestRequest testRequest, RequestStatus from, RequestStatus to, User changedBy) {
         TestRequestFlow testRequestFlow = new TestRequestFlow();
         testRequestFlow.setChangedBy(changedBy);
         testRequestFlow.setRequest(testRequest);
@@ -30,7 +30,7 @@ public class TestRequestFlowService {
 
 
 
-    public List<TestRequestFlow> findByRequest(TestRequest testRequest) {
+   public List<TestRequestFlow> findByRequest(TestRequest testRequest) {
 
         return testRequestFlowRepository.findByRequest(testRequest);
     }

@@ -1,17 +1,20 @@
-package org.upgrad.upstac.testrequests;
+package org.upgrad.upstac.testrequests.services;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import org.upgrad.upstac.exception.AppException;
+import org.upgrad.upstac.testrequests.TestRequest;
+import org.upgrad.upstac.testrequests.TestRequestRepository;
 import org.upgrad.upstac.testrequests.consultation.Consultation;
 import org.upgrad.upstac.testrequests.consultation.ConsultationService;
-import org.upgrad.upstac.testrequests.consultation.CreateConsultationRequest;
+import org.upgrad.upstac.testrequests.consultation.models.CreateConsultationRequest;
 import org.upgrad.upstac.testrequests.flow.TestRequestFlowService;
 import org.upgrad.upstac.testrequests.lab.LabResult;
 import org.upgrad.upstac.testrequests.lab.LabResultService;
-import org.upgrad.upstac.testrequests.lab.CreateLabResult;
+import org.upgrad.upstac.testrequests.lab.models.CreateLabResult;
+import org.upgrad.upstac.testrequests.models.RequestStatus;
 import org.upgrad.upstac.users.User;
 
 import javax.transaction.Transactional;

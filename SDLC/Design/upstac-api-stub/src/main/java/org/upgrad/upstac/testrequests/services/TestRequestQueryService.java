@@ -1,4 +1,4 @@
-package org.upgrad.upstac.testrequests;
+package org.upgrad.upstac.testrequests.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,10 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import org.upgrad.upstac.exception.AppException;
+import org.upgrad.upstac.testrequests.TestRequest;
+import org.upgrad.upstac.testrequests.TestRequestRepository;
 import org.upgrad.upstac.testrequests.consultation.Consultation;
 import org.upgrad.upstac.testrequests.consultation.ConsultationRepository;
 import org.upgrad.upstac.testrequests.lab.LabResult;
 import org.upgrad.upstac.testrequests.lab.LabResultRepository;
+import org.upgrad.upstac.testrequests.models.RequestStatus;
 import org.upgrad.upstac.users.User;
 
 import java.util.List;
